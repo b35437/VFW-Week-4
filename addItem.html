@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- Name: Nathan Byarley -->
+<!-- Project: VFW Week 4 -->
+<!-- Term: 1306 -->
+
+<html>   
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Add Equipment information based on game of your choice">
+		<meta name="keywords" content="game, equipment list" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="robots" content="index, follow"/>
+		<meta name="viewport" content="user-scalable=no, width=device-width"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="MobileOptimized" content="320"/>
+		<!-- DROID Viewport -->
+		<meta name="viewport" content="target-densitydpi=device-dpi" />
+		<!-- !CSS -->
+		<link rel="stylesheet" href="css/additem-style.css">
+		<!--Title-->
+		<title>Add Equipment Form</title>
+	</head>
+	<!-- !Body -->
+	<body>
+		<div class="header">
+			<img src="img/ashield-small.png" alt="Equipment List">
+			<h1>dd Equipment</h1>
+		</div>
+		<nav>
+		<a href="#" id="cleardata">Clear Stored Data</a>&nbsp; | &nbsp;
+		<a href="#" id="showdata">Display Data</a>
+		<a href="addItem.html" id="additem" style="display:none;">Add New Item</a>
+		</nav>
+		<!--Add Form-->
+		<form action="#" method="post" id="equipmentForm">
+			<fieldset id="equipmentInfoFieldSet">
+				<legend>Equipment Information</legend>
+				<span>(*) Fields are Required.</span>
+				<ul id="errors"></ul>
+				<ul id="questions">
+				<!-- EQUIPMENT NAME TEXT BOX-->
+					<li><label for="ename">*Equipment Name:</label><input type="text" id="ename" /></li>
+					<li id="select"><label for="islot">*Item Slot:</label></li>
+					<!-- RADIO BUTTON SELECTION FOR RARITY -->
+					<div id="radiogroup">
+						<label name ="RB" for="rarity">Rarity:</label>
+						<input type="radio" checked value="Common" id="common" name="rarity" /><label for="common">Common</label>
+						<input type="radio" value="Uncommon" id="uncommon" name="rarity" /><label for="uncommon">Uncommon</label>
+						<input type="radio" value="Rare" id="rare" name="rarity" /><label for="rare">Rare</label>
+						<input type="radio" value="Epic" id="epic" name="rarity" /><label for="epic">Epic</label>
+					</div>
+					<!-- SLIDER -->
+					<li><label for="islide">Item Level:</label>
+					<input type="range" min="1" max="60" value="1" step="1" id="islide" /></li>
+					<!-- DATE SELECTION BOX -->
+					<li><label for="date">Date Added:</label><input type="date" id="date" /></li>
+					<!-- CHECKBOX -->
+					<oi><input type="checkbox" id="saveto" />&nbsp<label for="saveto">Save to your item list?</label></oi>
+					<!-- TEXT AREA -->
+					<li><label for="note">Additional Notes:</label>
+					<textarea id="note"></textarea></li>
+					<li><input type="hidden" value="true" /></li>  <!-- HIDDEN INPUT -->
+				</ul>
+			</fieldset>
+			<input type="submit" value="Add the item!" id="saveBtn" /> <!-- SUBMIT BUTTON -->			
+		</form>
+		<!-- JavaScript -->
+		<script type="text/javascript" src="js/json.js"></script>
+		<script type="text/javascript" src="js/additem-script.js"></script>
+	</body>
+</html>
