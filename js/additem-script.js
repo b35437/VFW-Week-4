@@ -326,6 +326,14 @@ window.addEventListener("DOMContentLoaded", function Elist() {
 		}
 	}
 	
+	//slider function to display data
+	var islide = document.getElementById("islide");
+	var islideSpan = document.getElementById("islideAmount");
+	
+	islide.onchange = function() {
+		islideSpan.innerHTML = this.value;
+	}
+	
 	
 	//global variables
 	var itemSlot = ["--Select A Slot--", "Belt", "Chest", "Feet", "Gloves", "Helmet", "Pants", "Shoulders", "Back", "Main Hand", "Off Hand", "Two Handed", "Neck", "Left Ring", "Right Ring"];
