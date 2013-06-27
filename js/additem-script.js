@@ -167,6 +167,7 @@ window.addEventListener("DOMContentLoaded", function Elist() {
 			autoData();
 		}
 		
+		
 		//write data from local storage to the browser
 		var createDiv = document.createElement("div");
 		createDiv.setAttribute("id", "items");
@@ -193,7 +194,7 @@ window.addEventListener("DOMContentLoaded", function Elist() {
 			createListItem.appendChild(createSubList);
 			
 			//calling the img function
-			getImg(objectString.itemList[1],createSubList);
+			getImg(objectString.itemList[1], createSubList);
 			
 			//in loop also creates the li tages for the actual data within localstorage
 			for(var y in objectString) {
@@ -287,11 +288,14 @@ window.addEventListener("DOMContentLoaded", function Elist() {
 		}
 		byId("note").value = equipment.addNote[1];
 		
+		
 		//remove the initial listener from the input 'save contact' button
 		save.removeEventListener("click", saveData);
+		
 		//change submit button
 		byId("saveBtn").value = "Edit Equipment";
 		var editButton = byId("saveBtn");
+		
 		//save the key value established in this function as a property of the editbutton event
 		//so we can use that value when we save the data we edited
 		editButton.addEventListener("click", validate);
@@ -324,14 +328,6 @@ window.addEventListener("DOMContentLoaded", function Elist() {
 			return false;
 			
 		}
-	}
-	
-	//slider function to display data
-	var islide = document.getElementById("islide");
-	var islideSpan = document.getElementById("islideAmount");
-	
-	islide.onchange = function() {
-		islideSpan.innerHTML = this.value;
 	}
 	
 	
